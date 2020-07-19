@@ -13,7 +13,8 @@ const getForecast = (lat,lng,callback) => {
                 location: response.body.location.name,
                 currently: response.body.current.weather_descriptions[0],
                 temperature: response.body.current.temperature,
-                feelsLike: response.body.current.feelslike
+                feelsLike: response.body.current.feelslike,
+                humidity: response.body.current.humidity
             })
         }
     })

@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
                 // console.log(data.error)
             } else {
                 msg1.textContent = data.location
-                msg2.textContent = data.Outlook
+                msg2.textContent = data.weather
                 // console.log(data.location),
                 // console.log(data.Outlook)
             }

@@ -68,7 +68,7 @@ app.get('/weather',(req,res) => {
                 error:error
             })
         }
-        forecast(lat,lng,(error,{currently,temperature,feelsLike}) => {
+        forecast(lat,lng,(error,{currently,temperature,feelsLike,humidity}) => {
             if(error){
                 return res.send({
                     error:error
@@ -76,9 +76,7 @@ app.get('/weather',(req,res) => {
             }
             res.send({
                 "location":location,
-                "Outlook":currently,
-                "Actual Temperature": temperature,
-                "Feel Like Temperature": feelsLike
+                "weather":`It is currently ${currently} with an actual temperature of ${temperature} degrees and a real feel temperature of ${feelsLike} degrees.Humidity is ${humidity}%.`
             })
         
             // console.log(chalk.yellow(location));
